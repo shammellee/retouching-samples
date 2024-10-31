@@ -1,0 +1,116 @@
+/* http://meyerweb.com/eric/tools/css/reset/
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
+  display: block;
+}
+body {
+  line-height: 1;
+}
+ol, ul {
+  list-style: none;
+}
+blockquote, q {
+  quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+  content: '';
+  content: none;
+}
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+*
+{
+  box-sizing: border-box;
+}
+
+:root
+{
+  --photo-margin: 20px;
+}
+
+body
+{
+  align-items: center;
+  background-color: #2A2A2A;
+  display: flex;
+  flex-direction: column;
+  padding: var(--photo-margin);
+}
+
+main {
+  display: flex;
+  flex-direction: column;
+  max-width: 800px;
+  width: 100%;
+}
+
+#headline
+{
+  color: #FFFFFF;
+  font: 700 max(2em,3vw)/1.4 'Times New Roman', serif;
+  text-align: center;
+}
+
+#photo-list {margin-top: 1em;}
+
+.retouch-item
+{
+  aspect-ratio: 2/3;
+  background: no-repeat center / contain;
+  cursor: pointer;
+  display: block;
+  flex: 1 0 auto;
+}
+
+.retouch-item::before
+{
+  content: '';
+  height: 0;
+  position: absolute;
+  width: 0;
+}
+
+.retouch-item + .retouch-item {margin-top: var(--photo-margin);}
+
+#photo-1 {background: url('images/01_before.jpg');}
+#photo-1::before {background: url('images/01_after.jpg');}
+#photo-1:hover {background: url('images/01_after.jpg');}
+#photo-2 {background: url('images/02_before.jpg')}
+#photo-2::before {background: url('images/02_after.jpg');}
+#photo-2:hover {background: url('images/02_after.jpg');}
+#photo-3 {background: url('images/03_before.jpg');}
+#photo-3::before {background: url('images/03_after.jpg');}
+#photo-3:hover {background: url('images/03_after.jpg');}
+#photo-4 { background: url('images/04_before.jpg'); }
+#photo-4::before {background: url('images/04_after.jpg');}
+#photo-4:hover {background: url('images/04_after.jpg');}
+
