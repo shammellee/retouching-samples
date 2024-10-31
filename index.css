@@ -1,0 +1,82 @@
+:root
+{
+  --photo-margin: 20px;
+}
+
+body
+{
+  align-items: center;
+  background-color: #2A2A2A;
+  display: flex;
+  flex-direction: column;
+  padding: var(--photo-margin);
+}
+
+main {
+  display: flex;
+  flex-direction: column;
+  max-width: 800px;
+  width: 100%;
+}
+img {display: none;}
+
+#headline
+{
+  color: #FFFFFF;
+  font: 700 max(2em,3vw)/1.4 'Times New Roman', serif;
+  text-align: center;
+}
+
+#photo-list {margin-top: 1em;}
+
+.retouch-item
+{
+  aspect-ratio: 2/3;
+  background: no-repeat center / contain;
+  cursor: pointer;
+  display: block;
+  flex: 1 0 auto;
+}
+
+.retouch-item + .retouch-item {margin-top: var(--photo-margin);}
+
+#photo-1
+{
+  background-image: url('images/01_before.jpg');
+}
+
+#photo-1:hover
+{
+  background-image: url('images/01_after.jpg');
+}
+
+#photo-2
+{
+  background-image: url('images/02_before.jpg');
+}
+
+#photo-2:hover
+{
+  background-image: url('images/02_after.jpg');
+}
+
+#photo-3
+{
+  background-image: url('images/03_before.jpg');
+}
+
+#photo-3:hover
+{
+  background-image: url('images/03_after.jpg');
+}
+
+#photo-4
+{
+  background-image: url('images/04_before.jpg');
+}
+
+#photo-4:hover
+{
+  background-image: url('images/04_after.jpg');
+}
+
